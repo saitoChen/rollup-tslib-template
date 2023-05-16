@@ -1,12 +1,17 @@
 {
   "name": "rollup-typescript-lib",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": "git@github.com:saitoChen/rollup-typescript-lib.git",
   "author": "chen",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "rollup": "^3.21.7",
     "rollup-plugin-terser": "^7.0.2",
