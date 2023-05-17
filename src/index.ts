@@ -1,2 +1,2 @@
-const app = 'Hello World'
-console.log(app)
+const name:string = 'Hello World'
+console.log(name)

@@ -1,6 +1,6 @@
-import path from 'path' 
 import { readFileSync } from 'fs'
 import commonjs from '@rollup/plugin-commonjs' 
+import ts from "@rollup/plugin-typescript"
 import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
 
@@ -19,6 +19,9 @@ export default {
     plugins: [
         json(),
         commonjs(),
-        resolve()
+        resolve(),
+        ts({
+            declaration: true
+        })
     ]
 }
