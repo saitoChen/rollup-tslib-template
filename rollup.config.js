@@ -21,7 +21,8 @@ export default {
         commonjs(),
         resolve(),
         ts({
-            declaration: true
+            declaration: true,
+            declarationDir: "./dist/types"
         })
     ]
 }
