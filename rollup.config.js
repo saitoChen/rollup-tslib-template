@@ -1,3 +1,8 @@
+/*
+ * @Author: chenjianfeng chenjianfeng9335@gmail.com
+ * @Date: 2023-05-16 22:30:31
+ * @Description: 
+ */
 import { readFileSync } from 'fs'
 import commonjs from '@rollup/plugin-commonjs' 
 import ts from "@rollup/plugin-typescript"
@@ -13,7 +18,7 @@ export default {
     output: [
         {
             file: pkg.main,
-            format: 'cjs'
+            format: 'esm'
         }
     ],
     plugins: [
@@ -22,7 +27,7 @@ export default {
         resolve(),
         ts({
             declaration: true,
-            declarationDir: "./dist/types"
+            declarationDir: "./dist"
         })
     ]
 }

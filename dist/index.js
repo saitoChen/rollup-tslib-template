@@ -1,4 +1,3 @@
-'use strict';
+const sum = (a, b) => a + b;
 
-const name = 'Hello World';
-console.log(name);
+export { sum as default };

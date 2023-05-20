@@ -1,6 +1,6 @@
 {
   "name": "rollup-typescript-lib",
-  "version": "1.0.0",
+  "version": "0.0.7",
   "main": "./dist/index.js",
   "repository": "git@github.com:saitoChen/rollup-typescript-lib.git",
   "author": "chen",
