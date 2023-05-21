@@ -1,3 +1,5 @@
+'use strict';
+
 const sum = (a, b) => a + b;
 
 /*
@@ -10,4 +12,4 @@ const complexCalculate = (num1, num2) => {
     return sumRes + 1;
 };
 
-export { complexCalculate };
+exports.complexCalculate = complexCalculate;

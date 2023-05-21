@@ -1,3 +1,2 @@
-export type SumFn = (a: number, b: number) => number;
-declare const sum: (a: number, b: number) => number;
-export default sum;
+import { SumFn } from './utils/index.js';
+export declare const complexCalculate: SumFn;

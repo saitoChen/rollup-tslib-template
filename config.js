@@ -6,7 +6,7 @@ export const outputFn = (opts = { cjs: true, esm: true, umd: false }) => {
             format: 'esm'
         })
         opts.cjs && output.push({
-            file: 'dist/index.js',
+            file: 'dist/index.cjs',
             format: 'cjs'
         }),
         opts.umd && output.push({
