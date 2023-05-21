@@ -3,18 +3,15 @@ export const outputFn = (opts = { cjs: true, esm: true, umd: false }) => {
         const output= []
         opts.esm && output.push({
             file: 'dist/index.esm.js',
-            format: 'esm',
-            sourceMap: true
+            format: 'esm'
         })
         opts.cjs && output.push({
-            file: 'dist/index.cjs',
-            format: 'cjs',
-            sourceMap: true 
+            file: 'dist/index.js',
+            format: 'cjs'
         }),
         opts.umd && output.push({
             file: 'dist/index.umd.js',
-            format: 'umd',
-            sourceMap: true 
+            format: 'umd'
         })
 
         return output

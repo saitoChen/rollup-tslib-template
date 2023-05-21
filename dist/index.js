@@ -1,3 +1,5 @@
+'use strict';
+
 const sum = (a, b) => a + b;
 
-export { sum as default };
+module.exports = sum;
