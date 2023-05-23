@@ -9,4 +9,4 @@ Create typescript libs more easier✌
 TODO:
 
 - [ ] babel
-- [ ] put all of d.ts in one d.ts file at the root folder
+- [ ] API Extractor

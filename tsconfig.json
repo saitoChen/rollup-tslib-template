@@ -2,11 +2,14 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "NodeNext",
-    "esModuleInterop": true, 
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   "allowJs ": true
 }

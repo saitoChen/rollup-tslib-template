@@ -3,21 +3,22 @@
   "version": "0.0.12",
   "main": "./dist/index.cjs",
   "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/lib.d.ts",
   "repository": "git@github.com:saitoChen/rollup-typescript-lib.git",
   "author": "chen",
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
-      "type": "./dist/index.d.ts",
+      "type": "./dist/lib.d.ts",
       "import": "./dist/index.esm.js",
       "require": "./dist/index.cjs"
     }
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && rollup -c"
+    "build:dts": "api-extractor run --local --verbose && rimraf dist/src",
+    "build": "npm run clean && rollup -c && npm run build:dts"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",

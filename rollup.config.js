@@ -21,7 +21,10 @@ export default {
         resolve(),
         ts({
             declaration: true,
-            declarationDir: "./dist"
+            declarationMap: true,
+            isolatedModules: true,
+            filterRoot: process.cwd(),
+            tsconfig: './tsconfig.json',
         })
     ]
 }
