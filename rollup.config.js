@@ -4,6 +4,7 @@ import ts from "@rollup/plugin-typescript"
 import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
 import { outputFn } from './config.js'
+import { babel } from '@rollup/plugin-babel';
 
 const pkg = JSON.parse(
     readFileSync('./package.json', { encoding: 'utf-8' }),
@@ -17,6 +18,7 @@ export default {
     output: output(),
     plugins: [
         json(),
+        // commonjs must before rollup/plugin-babel
         commonjs(),
         resolve(),
         ts({
@@ -25,6 +27,13 @@ export default {
             isolatedModules: true,
             filterRoot: process.cwd(),
             tsconfig: './tsconfig.json',
+        }),
+        babel({
+            babelHelpers: 'runtime',
+            exclude: 'node_modules/**',
+            extensions: [
+                '.ts',
+            ],
         })
     ]
 }

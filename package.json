@@ -1,5 +1,5 @@
 {
-  "name": "rollup-typescript-lib",
+  "name": "rollup-typescript-lib", // use your lib name
   "version": "0.0.18",
   "main": "./dist/index.cjs",
   "module": "./dist/index.esm.js",
@@ -21,6 +21,7 @@
     "build": "npm run clean && rollup -c && npm run build:dts"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.8",
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.21.5",
     "@rollup/plugin-babel": "^6.0.3",
