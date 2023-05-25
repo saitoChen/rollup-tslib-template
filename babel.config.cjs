@@ -17,4 +17,4 @@ const plugins = [
         }
     ]
 ];
-module.exports = {targets: 'ie 8', plugins, presets};
+module.exports = { plugins, presets };
