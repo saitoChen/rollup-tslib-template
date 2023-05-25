@@ -4,6 +4,7 @@ import ts from "@rollup/plugin-typescript"
 import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
 import { outputFn } from './config.js'
+import terser from '@rollup/plugin-terser';
 
 const pkg = JSON.parse(
     readFileSync('./package.json', { encoding: 'utf-8' }),
@@ -25,6 +26,7 @@ export default {
             isolatedModules: true,
             filterRoot: process.cwd(),
             tsconfig: './tsconfig.json',
-        })
+        }),
+        terser()
     ]
 }
