@@ -1,5 +1,5 @@
 {
-  "name": "rollup-typescript-lib", // use your lib name
+  "name": "rollup-typescript-lib",
   "version": "0.0.18",
   "main": "./dist/index.cjs",
   "module": "./dist/index.esm.js",
